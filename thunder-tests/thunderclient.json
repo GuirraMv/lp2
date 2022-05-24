@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "f430dd20-e59b-4e5c-a770-3d5f1ebef803",
+    "colId": "bab308c5-ee40-467e-8dff-18c6552a8eb7",
+    "containerId": "",
+    "name": "user/select-all",
+    "url": "http://localhost/lp2/api/user/select-all",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-05-23T19:26:57.232Z",
+    "modified": "2022-05-23T19:26:57.232Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
