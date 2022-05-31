@@ -54,8 +54,13 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-05-30T20:53:43.824Z",
-    "modified": "2022-05-31T20:22:35.004Z",
-    "headers": [],
+    "modified": "2022-05-31T20:49:39.360Z",
+    "headers": [
+      {
+        "name": "ACCESS-TOKEN",
+        "value": "4ba88c82dd433c1d03d0658fe971cfbe"
+      }
+    ],
     "params": [],
     "body": {
       "type": "formdata",
@@ -72,6 +77,34 @@
         {
           "name": "descricao",
           "value": "sdfhbz\\shgahf"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "dc5d29be-d0b7-4c8e-b8f8-ed42e5f5a9bd",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost/lp2/api/auth/login",
+    "url": "http://localhost/lp2/api/auth/login",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-05-31T20:40:37.636Z",
+    "modified": "2022-05-31T20:47:43.928Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "email",
+          "value": "matheusguirra@email.com"
+        },
+        {
+          "name": "pass",
+          "value": "123"
         }
       ]
     },
