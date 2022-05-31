@@ -12,5 +12,69 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "dfd12386-8edb-4c47-a1c8-b04d0d0e188a",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost/lp2/api/user/create",
+    "url": "http://localhost/lp2/api/user/create",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-05-30T20:46:16.344Z",
+    "modified": "2022-05-30T20:46:17.044Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "photo",
+          "value": "https://t.ctcdn.com.br/WCmZ_LU_RoCZL1jCno7fE153Z_U=/400x400/smart/filters:format(webp)/i489932.jpeg"
+        },
+        {
+          "name": "title",
+          "value": "Testando"
+        },
+        {
+          "name": "descricao",
+          "value": "testando alterações"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "a114a4cc-46ce-4203-beaa-1fc21739fbce",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost/lp2/api/card/create",
+    "url": "http://localhost/lp2/api/card/create",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-05-30T20:53:43.824Z",
+    "modified": "2022-05-30T20:53:43.847Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "photo",
+          "value": "https://t.ctcdn.com.br/WCmZ_LU_RoCZL1jCno7fE153Z_U=/400x400/smart/filters:format(webp)/i489932.jpeg"
+        },
+        {
+          "name": "title",
+          "value": "Testando"
+        },
+        {
+          "name": "descricao",
+          "value": "testando alterações"
+        }
+      ]
+    },
+    "tests": []
   }
 ]
