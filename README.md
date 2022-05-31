@@ -1,7 +1,13 @@
-# CRUD criado na aula de linguagem de programação 2
+# Vanilla PHP RestFull API
 
-Sistema de back-end criado com PHP para usar juntamente com o projeto da disciplina de Projeto Integrador 3.
+This project implement a vanilla PHP API without dependences.
+
+Design Patterns: Object Orientation, Model and Controll Layer.
+
+Database: MySQL
 
 ## Autor
 
-Matheus Guirra Vieira
+Renan Cavichi
+
+[LinkedIn](https://br.linkedin.com/in/renancavichi)

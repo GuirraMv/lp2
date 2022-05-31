@@ -10,7 +10,6 @@ function myLoaders($class_name){
         require CONTROLLERS_FOLDER . $class_name . '.php';
     }
 }
-
-//atualiza o carregamento dos modelos
+//automatiza o carregamento dos modelos
 spl_autoload_register('myLoaders');
 ?>
