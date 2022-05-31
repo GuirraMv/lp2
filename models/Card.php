@@ -1,5 +1,5 @@
 <?php 
-class Product{
+class Card{
     public $id;
     public $photo;
     public $title;
@@ -13,7 +13,7 @@ class Product{
     function create(){
         $db = new Database();
         try {
-            $stmt = $db->conn->prepare("INSERT INTO products (photo, title, descricao)
+            $stmt = $db->conn->prepare("INSERT INTO Cards (photo, title, descricao)
             VALUES (:photo, :title, :descricao);");
             $stmt->bindParam(':photo', $this->photo);
             $stmt->bindParam(':title', $this->title);

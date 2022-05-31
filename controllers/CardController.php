@@ -1,5 +1,5 @@
 <?php
-class ProductController{
+class CardController{
 
     function create(){
         $response = new Output();
@@ -14,14 +14,14 @@ class ProductController{
         $descricao = $_POST['descricao'];
 
         //Processamento ou Persistencia
-        $product = new Product(null, $photo, $title, $descricao);
-        $id = $product->create();
+        $Card = new Card(null, $photo, $title, $descricao);
+        $id = $Card->create();
         //Saída
         $result['message'] = "Card Cadastrado com sucesso!";
-        $result['product']['id'] = $id;
-        $result['product']['photo'] = $photo;
-        $result['product']['title'] = $title;
-        $result['product']['descricao'] = $descricao;
+        $result['Card']['id'] = $id;
+        $result['Card']['photo'] = $photo;
+        $result['Card']['title'] = $title;
+        $result['Card']['descricao'] = $descricao;
         $response->out($result);
     }
 
@@ -35,8 +35,8 @@ class ProductController{
         $id = $_POST['id'];
         $user = new User($id, null, null, null);
         $user->delete();
-        $result['message'] = "User deletado com sucesso!";
-        $result['user']['id'] = $id;
+        $result['message'] = "Card deletado com sucesso!";
+        $result['Card']['id'] = $id;
         $response->out($result);
     }
 
@@ -53,10 +53,10 @@ class ProductController{
         $pass = $_POST['pass'];
         $user = new User($id, $name, $email, $pass);
         $user->update();
-        $result['message'] = "User atualizado com sucesso!";
-        $result['user']['id'] = $id;
-        $result['user']['name'] = $name;
-        $result['user']['email'] = $email;
+        $result['message'] = "Card atualizado com sucesso!";
+        $result['Card']['id'] = $id;
+        $result['Card']['name'] = $name;
+        $result['Card']['email'] = $email;
         $response->out($result);
     }
 

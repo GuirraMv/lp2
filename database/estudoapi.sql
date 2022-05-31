@@ -27,18 +27,18 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `products`
 --
 
-CREATE TABLE `products` (
+CREATE TABLE `cards` (
   `id` int(11) NOT NULL,
   `photo` varchar(400) NOT NULL,
   `title` varchar(200) NOT NULL,
-  `price` varchar(50) NOT NULL
+  `descricao` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `products`
+-- Extraindo dados da tabela `cards`
 --
 
-INSERT INTO `products` (`id`, `photo`, `title`, `price`) VALUES
+INSERT INTO `cards` (`id`, `photo`, `title`, `descricao`) VALUES
 (1, 'https://marcasdeprodutos.com.br/wp-content/uploads/2021/05/desktop-computer-500x500-1.jpg', 'PC Gamer Pro 7 Core', 'R$ 9.800,00'),
 (2, 'https://marcasdeprodutos.com.br/wp-content/uploads/2021/05/desktop-computer-500x500-1.jpg', 'PC Gamer Pro 7 Core', 'R$ 9.800,00');
 
@@ -93,9 +93,9 @@ INSERT INTO `users` (`id`, `name`, `email`, `pass`, `roles`) VALUES
 --
 
 --
--- Índices para tabela `products`
+-- Índices para tabela `cards`
 --
-ALTER TABLE `products`
+ALTER TABLE `cards`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -116,9 +116,9 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT de tabela `products`
+-- AUTO_INCREMENT de tabela `cards`
 --
-ALTER TABLE `products`
+ALTER TABLE `cards`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
