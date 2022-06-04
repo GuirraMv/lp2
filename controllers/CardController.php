@@ -33,8 +33,8 @@ class CardController{
         $user_session = $auth->allowedRole('admin');
 
         $id = $_POST['id'];
-        $user = new User($id, null, null, null);
-        $user->delete();
+        $Card = new Card($id, null, null, null);
+        $Card->delete();
         $result['message'] = "Card deletado com sucesso!";
         $result['Card']['id'] = $id;
         $response->out($result);
@@ -48,23 +48,24 @@ class CardController{
         $user_session = $auth->allowedRole('admin');
 
         $id = $_POST['id'];
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $pass = $_POST['pass'];
-        $user = new User($id, $name, $email, $pass);
-        $user->update();
+        $photo = $_POST['photo'];
+        $title = $_POST['title'];
+        $descricao = $_POST['descricao'];
+        $Card = new Card($id, $photo, $title, $descricao);
+        $Card->update();
         $result['message'] = "Card atualizado com sucesso!";
         $result['Card']['id'] = $id;
-        $result['Card']['name'] = $name;
-        $result['Card']['email'] = $email;
+        $result['Card']['photo'] = $photo;
+        $result['Card']['title'] = $title;
+        $result['Card']['descricao'] = $descricao;
         $response->out($result);
     }
 
     function selectAll(){
         $response = new Output();
         $response->allowedMethod('GET');
-        $user = new User(null, null, null, null);
-        $result = $user->selectAll();
+        $Card = new Card(null, null, null, null);
+        $result = $Card->selectAll();
         $response->out($result);
     }
 
@@ -72,8 +73,8 @@ class CardController{
         $response = new Output();
         $response->allowedMethod('GET');
         $id = $_GET['id'];
-        $user = new User($id, null, null, null);
-        $result = $user->selectById();
+        $Card = new Card($id, null, null, null);
+        $result = $Card->selectById();
         $response->out($result);
     }
 
