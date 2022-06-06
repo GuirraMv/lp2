@@ -4,20 +4,23 @@ class Card{
     public $photo;
     public $title;
     public $descricao;
-    function __construct($id, $photo, $title, $descricao) {
+    public $texto;
+    function __construct($id, $photo, $title, $descricao, $texto) {
         $this->id = $id;
         $this->photo = $photo;
         $this->title = $title;
         $this->descricao = $descricao;
+        $this->texto = $texto;
     }
     function create(){
         $db = new Database();
         try {
-            $stmt = $db->conn->prepare("INSERT INTO Cards (photo, title, descricao)
-            VALUES (:photo, :title, :descricao);");
+            $stmt = $db->conn->prepare("INSERT INTO Cards (photo, title, descricao, texto)
+            VALUES (:photo, :title, :descricao, :texto);");
             $stmt->bindParam(':photo', $this->photo);
             $stmt->bindParam(':title', $this->title);
             $stmt->bindParam(':descricao', $this->descricao);
+            $stmt->bindParam(':texto', $this->texto)
             $stmt->execute();
             $id = $db->conn->lastInsertId();
             return $id;
@@ -43,11 +46,12 @@ class Card{
     function update(){
         $db = new Database();
         try {
-            $stmt = $db->conn->prepare("UPDATE cards SET photo = :photo, title = :title, descricao = :descricao WHERE id = :id;");
+            $stmt = $db->conn->prepare("UPDATE cards SET photo = :photo, title = :title, descricao = :descricao, texto = :texto WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->bindParam(':photo', $this->photo);
             $stmt->bindParam(':title', $this->title);
             $stmt->bindParam(':descricao', $this->descricao);
+            $stmt->bindParam(':texto', $this->texto)
             $stmt->execute();
             return true;
         }catch(PDOException $e) {

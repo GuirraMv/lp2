@@ -12,9 +12,9 @@ class CardController{
         $photo = $_POST['photo'];
         $title = $_POST['title'];
         $descricao = $_POST['descricao'];
-
+        $texto = $_POST['texto'];
         //Processamento ou Persistencia
-        $Card = new Card(null, $photo, $title, $descricao);
+        $Card = new Card(null, $photo, $title, $descricao, $texto);
         $id = $Card->create();
         //Saída
         $result['message'] = "Card Cadastrado com sucesso!";
@@ -22,6 +22,7 @@ class CardController{
         $result['Card']['photo'] = $photo;
         $result['Card']['title'] = $title;
         $result['Card']['descricao'] = $descricao;
+        $result['Card']['texto'] = $texto;
         $response->out($result);
     }
 
@@ -33,7 +34,7 @@ class CardController{
         $user_session = $auth->allowedRole('admin');
 
         $id = $_POST['id'];
-        $Card = new Card($id, null, null, null);
+        $Card = new Card($id, null, null, null, null);
         $Card->delete();
         $result['message'] = "Card deletado com sucesso!";
         $result['Card']['id'] = $id;
@@ -51,20 +52,22 @@ class CardController{
         $photo = $_POST['photo'];
         $title = $_POST['title'];
         $descricao = $_POST['descricao'];
-        $Card = new Card($id, $photo, $title, $descricao);
+        $texto = $_POST['texto'];
+        $Card = new Card($id, $photo, $title, $descricao, $texto);
         $Card->update();
         $result['message'] = "Card atualizado com sucesso!";
         $result['Card']['id'] = $id;
         $result['Card']['photo'] = $photo;
         $result['Card']['title'] = $title;
         $result['Card']['descricao'] = $descricao;
+        $result['Card']['texto'] = $texto
         $response->out($result);
     }
 
     function selectAll(){
         $response = new Output();
         $response->allowedMethod('GET');
-        $Card = new Card(null, null, null, null);
+        $Card = new Card(null, null, null, null, null);
         $result = $Card->selectAll();
         $response->out($result);
     }
@@ -73,7 +76,7 @@ class CardController{
         $response = new Output();
         $response->allowedMethod('GET');
         $id = $_GET['id'];
-        $Card = new Card($id, null, null, null);
+        $Card = new Card($id, null, null, null, null);
         $result = $Card->selectById();
         $response->out($result);
     }
