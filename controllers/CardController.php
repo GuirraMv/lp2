@@ -60,7 +60,7 @@ class CardController{
         $result['Card']['photo'] = $photo;
         $result['Card']['title'] = $title;
         $result['Card']['descricao'] = $descricao;
-        $result['Card']['texto'] = $texto
+        $result['Card']['texto'] = $texto;
         $response->out($result);
     }
 

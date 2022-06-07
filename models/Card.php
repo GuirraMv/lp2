@@ -20,7 +20,7 @@ class Card{
             $stmt->bindParam(':photo', $this->photo);
             $stmt->bindParam(':title', $this->title);
             $stmt->bindParam(':descricao', $this->descricao);
-            $stmt->bindParam(':texto', $this->texto)
+            $stmt->bindParam(':texto', $this->texto);
             $stmt->execute();
             $id = $db->conn->lastInsertId();
             return $id;
@@ -51,7 +51,7 @@ class Card{
             $stmt->bindParam(':photo', $this->photo);
             $stmt->bindParam(':title', $this->title);
             $stmt->bindParam(':descricao', $this->descricao);
-            $stmt->bindParam(':texto', $this->texto)
+            $stmt->bindParam(':texto', $this->texto);
             $stmt->execute();
             return true;
         }catch(PDOException $e) {

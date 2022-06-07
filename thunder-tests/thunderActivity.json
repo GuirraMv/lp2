@@ -54,11 +54,11 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-05-30T20:53:43.824Z",
-    "modified": "2022-05-31T20:49:39.360Z",
+    "modified": "2022-06-07T17:49:46.793Z",
     "headers": [
       {
         "name": "ACCESS-TOKEN",
-        "value": "4ba88c82dd433c1d03d0658fe971cfbe"
+        "value": "06d2d9881df4690efa656dd48d357980"
       }
     ],
     "params": [],
@@ -72,11 +72,15 @@
         },
         {
           "name": "title",
-          "value": "teste"
+          "value": "testando"
         },
         {
           "name": "descricao",
-          "value": "sdfhbz\\shgahf"
+          "value": "testetexte"
+        },
+        {
+          "name": "texto",
+          "value": "teste"
         }
       ]
     },
@@ -91,7 +95,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-05-31T20:40:37.636Z",
-    "modified": "2022-05-31T20:47:43.928Z",
+    "modified": "2022-06-07T17:48:50.623Z",
     "headers": [],
     "params": [],
     "body": {
