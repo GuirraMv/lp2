@@ -54,7 +54,7 @@ class MateriaController{
         $descricao = $_POST['descricao'];
         $texto = $_POST['texto'];
         $Materia = new Materia($id, $photo, $title, $descricao, $texto);
-        $Card->update();
+        $Materia->update();
         $result['message'] = "Materia atualizado com sucesso!";
         $result['Materia']['id'] = $id;
         $result['Materia']['photo'] = $photo;
