@@ -1,5 +1,5 @@
 <?php
-class CardController{
+class MateriaController{
 
     function create(){
         $response = new Output();
