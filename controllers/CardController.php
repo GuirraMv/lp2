@@ -5,8 +5,8 @@ class CardController{
         $response = new Output();
         $response->allowedMethod('POST');
 
-        $auth = new Auth();
-        $user_session = $auth->allowedRole('admin');
+        // $auth = new Auth();
+        // $user_session = $auth->allowedRole('admin');
 
         //Entradas
         $photo = $_POST['photo'];

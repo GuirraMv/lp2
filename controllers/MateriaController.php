@@ -5,8 +5,8 @@ class MateriaController{
         $response = new Output();
         $response->allowedMethod('POST');
 
-        $auth = new Auth();
-        $user_session = $auth->allowedRole('admin');
+        // $auth = new Auth();
+        // $user_session = $auth->allowedRole('admin');
 
         //Entradas
         $photo = $_POST['photo'];
@@ -36,7 +36,7 @@ class MateriaController{
         $id = $_POST['id'];
         $Materia = new Materia($id, null, null, null, null);
         $Materia->delete();
-        $result['message'] = "Card deletado com sucesso!";
+        $result['message'] = "Materia deletado com sucesso!";
         $result['Materia']['id'] = $id;
         $response->out($result);
     }
