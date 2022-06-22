@@ -30,8 +30,8 @@ class MateriaController{
         $response = new Output();
         $response->allowedMethod('POST');
 
-        $auth = new Auth();
-        $user_session = $auth->allowedRole('admin');
+        // $auth = new Auth();
+        // $user_session = $auth->allowedRole('admin');
 
         $id = $_POST['id'];
         $Materia = new Materia($id, null, null, null, null);
@@ -45,8 +45,8 @@ class MateriaController{
         $response = new Output();
         $response->allowedMethod('POST');
 
-        $auth = new Auth();
-        $user_session = $auth->allowedRole('admin');
+        // $auth = new Auth();
+        // $user_session = $auth->allowedRole('admin');
 
         $id = $_POST['id'];
         $photo = $_POST['photo'];
